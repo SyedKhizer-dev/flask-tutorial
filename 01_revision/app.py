@@ -40,16 +40,16 @@ def form():
         total_score = maths + science + english
         average_score = total_score / 3
 
-        # return render_template(
-        #     "form.html", total_score=total_score, average_score=average_score
-        # )
+        return render_template(
+            "form.html", total_score=total_score, average_score=average_score
+        )
 
-        if average_score >= 40:
-            res = "success"
-        else:
-            res = "fail"
+        # if average_score >= 40:
+        #     res = "success"
+        # else:
+        #     res = "fail"
 
-        return redirect(url_for(res, score=average_score))
+        # return redirect(url_for(res, score=average_score))
 
 
 @app.route("/api", methods=["POST"])
